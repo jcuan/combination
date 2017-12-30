@@ -26,9 +26,6 @@ composer install
 - 没有任何缓存支持的组件
 - 暂时没有create-project这种功能，先差不多了再说吧
 
-## 文档
-
-参见[项目文档](src/doc/doc.md)
 
 ## License
 
