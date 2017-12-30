@@ -10,6 +10,7 @@
 ```
 composer install
 ```
+将config/prod/config.php复制到config目录下（开发环境）
 
 ## 特性
 

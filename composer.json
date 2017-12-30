@@ -1,0 +1,44 @@
+{
+	"description": "a tiny framework made up of some awesome composer components",
+	"name": "Star",
+	"type": "project",
+	"require": {
+		"php": ">=5.6.4",
+		"ext-gd":"*",
+		"ext-mbstring":"*",
+		"ext-PDO":"*",
+		"ext-json":"*",
+		"ext-fileinfo":"*",
+		"monolog/monolog": "~1.2",
+		"illuminate/database":"5.4.*",
+		"swiftmailer/swiftmailer":"5.4.*",
+		"gregwar/image": "2.*",
+		"robmorgan/phinx":"0.9.*",
+		"nikic/fast-route": "1.2.*",
+		"symfony/http-foundation": "3.4.*",
+		"symfony/console":"3.4.*",
+		"symfony/debug":"3.4.*",
+		"symfony/asset":"3.4.*",
+		"symfony/process":"3.4.*",
+		"wixel/gump":"1.5.*",
+		"pimple/pimple":"3.2.*",
+		"overtrue/wechat": "3.3.*"
+	},
+	"require-dev": {
+		"codeception/codeception":"2.3.*",
+		"jbzoo/pimpledumper": "~1.2"
+	},
+	"autoload":{
+		"psr-4":{
+			"App\\Controllers\\":"app/Controllers",
+			"App\\Models\\":"app/Models",
+			"App\\Libs\\":"app/Libs",
+			"App\\Urls\\":"app/Urls",
+			"App\\Components\\":"app/Components",
+			"Star\\Core\\":"src/Core",
+			"Star\\Components\\":"src/Components",
+			"Star\\Libs\\":"src/Libs",
+			"Star\\Commands\\":"src/Commands"
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.*
+!.gitignore
+pimple.json
+config/config.php
+vendor/*
+app/Controllers/Test.php
+app/Urls/Test.php
+web/uploads/*
+runtime/*
+!runtime/.
+push
