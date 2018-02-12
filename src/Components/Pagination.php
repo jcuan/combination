@@ -2,7 +2,7 @@
 
 namespace Star\Components;
 
-use Star\Core\BaseComponent;
+use Star\Core\ComponentTrait;
 
 /**
  * Class Pagination  分页类
@@ -12,8 +12,10 @@ use Star\Core\BaseComponent;
  * @package Star\component
  */
 
-class Pagination extends BaseComponent
+class Pagination
 {
+
+    use ComponentTrait;
 
     /**
      * @var string 分页get参数名称

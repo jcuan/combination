@@ -99,10 +99,10 @@ class App
         }
 
         //设置错误处理函数,处于开发环境的时候，使用symfony的debug组件
-        if (ENV != 'development') {
+        if (ENV != 'dev') {
             set_error_handler('\Star\Core\Funcs::errorHandler');
             set_exception_handler('\Star\Core\Funcs::exceptionHandler');
-        } elseif (ENV == 'development' && php_sapi_name() !=='cli') {
+        } elseif (ENV == 'dev' && php_sapi_name() !=='cli') {
             Debug::enable();
             ErrorHandler::register();
             ExceptionHandler::register();

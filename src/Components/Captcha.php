@@ -2,15 +2,17 @@
 
 namespace Star\Components;
 
-use Star\Core\BaseComponent;
+use Star\Core\ComponentTrait;
 use Star\Core\Response;
 
 /**
  * 验证码类，集成了通过session的验证
  */
 
-class Captcha extends BaseComponent
+class Captcha
 {
+    use ComponentTrait;
+
     protected $width=80;
 
     protected $height=30;

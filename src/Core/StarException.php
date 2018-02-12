@@ -1,5 +1,5 @@
 <?php
-namespace Star\core;
+namespace Star\Core;
 
 class StarException extends \Exception
 {

@@ -1,6 +1,6 @@
 <?php
 
-use Star\Components\Validation;
+use Star\Libs\Validation;
 
 class ValidationTest extends \Codeception\Test\Unit
 {

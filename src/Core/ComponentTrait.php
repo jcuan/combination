@@ -3,10 +3,11 @@
 namespace Star\Core;
 
 /**
- * 基本的组件类，框架的组件都继承本类
+ * 基本的组件trait，框架的组件都继承本trait
+ * 提供服务创建、配置检查和基本的属性配置方法
  */
 
-class BaseComponent
+Trait ComponentTrait
  {
      /**
       * 服务容器，可以在里边得到其他的服务

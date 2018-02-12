@@ -54,7 +54,7 @@ class Funcs
             $content = 'Sorry，服务器产生了某个错误 )：';
             $title = '服务器错误';
         }
-        self::loadView('error',['content'=>$content,'title'=>$title]);
+        self::loadView('core/error',['content'=>$content,'title'=>$title]);
         $response=App::getInstance()->response;
         $response->setContent(ob_get_clean());
         $response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
