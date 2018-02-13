@@ -5,15 +5,6 @@ namespace Star\Core;
 
 class Template
 {
-    /**
-     * @var string 保存模板的路径
-     */
-    private $path;
-
-    public function __construct($path)
-    {
-        $this->path=$path;
-    }
 
     /**
      * 转义成html实体字符
@@ -21,7 +12,7 @@ class Template
      * @param string $text
      * @return string
      */
-    public function e($text)
+    public static function e($text)
     {
         return htmlspecialchars($text,ENT_QUOTES,'utf-8');
     }
@@ -29,14 +20,28 @@ class Template
     /**
      * 渲染视图
      *
-     * @param string $location 位置
-     * @param array $params 参数
+     * @param $location
+     * @param array $params
+     * @return string
      */
-    public function render($location, $params=[])
+    public static function render($location, $params=[])
     {
-        $path = $this->path.DIRECTORY_SEPARATOR.$location . '.php';
+        self::include($location,$params);
+        return ob_get_clean();
+    }
+
+    /**
+     * 包含其他的模板
+     *
+     * @param $location
+     * @param array $params
+     */
+    public static function include($location,$params=[])
+    {
+        $path = APP_PATH.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.$location . '.php';
         extract($params);
         include $path;
     }
+
 
 }

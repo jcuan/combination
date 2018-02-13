@@ -2,6 +2,7 @@
 
 namespace Star\Core;
 
+
 class BaseController
 {
     //框架核心资源
@@ -21,8 +22,8 @@ class BaseController
      */
     public function render($location,$params=[])
     {
-        $template=new Template(APP_PATH.DIRECTORY_SEPARATOR.'views');
-        $template->render($location,$params);
-        return ob_get_clean();
+        $content=Template::render($location,$params);
+        return $content;
     }
+
 }

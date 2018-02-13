@@ -32,21 +32,9 @@ $app->request->query->get('bar', 'baz');    //获得url参数
       //controller的getCache就是ob_get_clean
       public function view()
       {
-          $this->app->loadView('header',['title'=>'test']);
-          $this->app->loadView('content');
-          $this->app->loadView('footer');
-          return $this->getCache();
+          return $this->render('view',['xxx'=>'xxx']);
       }    
   ```
 
-- 自己构建响应
-    ```php
-    <?php
-    //此时在controller中的函数不要返回任何值
-    public function json()
-    {
-        (new JsonResponse(['data' => '你好']))->send();
-    }
-    ```
 
 request对象更多细节参见symfony/http-foundation文档
